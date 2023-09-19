@@ -5,6 +5,7 @@ class Negociacao {
         // através do constructor, definimos as proprierades de uma classe
         // cada parâmetro recebido será atrivuido às propriedades da classe
 
+<<<<<<< Updated upstream
 
         Object.assign(this, { _data:(new Date(data.getTime()), _quantidade: quantidade, _valor: valor)}); //Aqui, simplificamos o código abaixo com o método Object.assign
         
@@ -12,6 +13,13 @@ class Negociacao {
         // this._quantidade = quantidade;
         // this._valor= valor;
 
+=======
+        Object.assign(this, {_data: new Date(data.getTime()), _quantidade: quantidade, _valor: valor});
+
+        this._data= new Date(data.getTime()); //captura a data atual
+        this._quantidade = quantidade;
+        this._valor= valor;
+>>>>>>> Stashed changes
         Object.freeze(this);
         
         /* congela o objeto e não deixa que um novo valor seja atribuído ( x = y)
@@ -32,11 +40,16 @@ com	seu	valor padrão.*/
     // realizando conta de modo eficaz, para não ser repetitivo e não ocorrer erros 
     // Função que define um comportamento de uma classe, ou também, Métodos. ObtemVolume é um método
 
+<<<<<<< Updated upstream
     get Data(){
         return new Date(this._data.getTime());
         /* Programação Defensiva. Fazemos com q o elemento não possa ser alterado de forma alguma
         nem mesmo com o set
         */
+=======
+    get data(){
+        return new Date(this._data.getTime());
+>>>>>>> Stashed changes
     }
 
     get Quantidade(){
