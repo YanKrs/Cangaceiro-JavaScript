@@ -1,4 +1,3 @@
-
 let campos = [
     document.querySelector('#data'),
     document.querySelector('#valor'),

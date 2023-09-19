@@ -65,13 +65,16 @@
     
     let n1 = new Negociacao (new Date(), 5, 700);
 
-    n1.Data.setDate(11);
+        console.log(n1.data);
 
-        console.log(n1.Data);
-        console.log(n1.Quantidade);
-        console.log(n1.Valor);
-        console.log(n1.Volume);
+        let outroDia = new Date();
 
+        outroDia.setDate(11);
+
+        n1.data = outroDia;
+
+        console.log(n1.data);
+        
 
     </script>
 </body>
